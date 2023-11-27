@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-
+   <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
@@ -33,6 +33,19 @@
          
           </item>
           <item row="8" column="1" colspan="2">
+           <widget class="QCheckBox" name="just_output">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Graficar solo última época</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item row="1" column="2">
            <widget class="QLineEdit" name="mu">
@@ -374,7 +387,10 @@
     <property name="title">
      <string>Dataset</string>
     </property>
-
+    <addaction name="actionGuardar_dataset"/>
+    <addaction name="actionAbrir_dataset"/>
+   </widget>
+   <addaction name="menuGuardar_dataset"/>
   </widget>
 
  <resources/>
