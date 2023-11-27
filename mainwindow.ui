@@ -17,7 +17,9 @@
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
      <widget class="QGroupBox" name="groupBox">
-     
+      <property name="title">
+       <string>Haga click izquierdo para colocar un (1) y derecho para un (0)</string>
+      </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <layout class="QVBoxLayout" name="plot_area"/>
@@ -30,7 +32,15 @@
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="5" column="1">
            <widget class="QLabel" name="label_5">
-         
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Época</string>
+            </property>
+           </widget>
           </item>
           <item row="8" column="1" colspan="2">
            <widget class="QCheckBox" name="just_output">
@@ -60,7 +70,16 @@
            </widget>
           </item>
           <item row="0" column="2">
-         
+           <widget class="QLineEdit" name="learning_rate">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>0.2</string>
+            </property>
+           </widget>
           </item>
           <item row="1" column="1">
            <widget class="QLabel" name="label_8">
@@ -382,6 +401,12 @@
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1044</width>
+     <height>22</height>
+    </rect>
    </property>
    <widget class="QMenu" name="menuGuardar_dataset">
     <property name="title">
@@ -392,7 +417,18 @@
    </widget>
    <addaction name="menuGuardar_dataset"/>
   </widget>
-
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionGuardar_dataset">
+   <property name="text">
+    <string>Guardar dataset</string>
+   </property>
+  </action>
+  <action name="actionAbrir_dataset">
+   <property name="text">
+    <string>Abrir dataset</string>
+   </property>
+  </action>
+ </widget>
  <resources/>
  <connections/>
 </ui>
