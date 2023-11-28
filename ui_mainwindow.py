@@ -241,3 +241,59 @@ class Ui_MainWindow(object):
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
+
+    
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionGuardar_dataset.setText(QCoreApplication.translate("MainWindow", u"Guardar dataset", None))
+        self.actionAbrir_dataset.setText(QCoreApplication.translate("MainWindow", u"Abrir dataset", None))
+        self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"Haga click izquierdo para colocar un (1) y derecho para un (0)", None))
+        self.groupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Datos de entrenamiento", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u00c9poca", None))
+        self.just_output.setText(QCoreApplication.translate("MainWindow", u"Graficar solo \u00faltima \u00e9poca", None))
+        self.mu.setText(QCoreApplication.translate("MainWindow", u"0.1", None))
+        self.learning_rate.setText(QCoreApplication.translate("MainWindow", u"0.2", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"Mu", None))
+        self.n_neurons.setItemText(0, QCoreApplication.translate("MainWindow", u"3", None))
+        self.n_neurons.setItemText(1, QCoreApplication.translate("MainWindow", u"4", None))
+        self.n_neurons.setItemText(2, QCoreApplication.translate("MainWindow", u"5", None))
+        self.n_neurons.setItemText(3, QCoreApplication.translate("MainWindow", u"6", None))
+        self.n_neurons.setItemText(4, QCoreApplication.translate("MainWindow", u"7", None))
+        self.n_neurons.setItemText(5, QCoreApplication.translate("MainWindow", u"8", None))
+        self.n_neurons.setItemText(6, QCoreApplication.translate("MainWindow", u"9", None))
+        self.n_neurons.setItemText(7, QCoreApplication.translate("MainWindow", u"10", None))
+
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"MSE", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u00c9pocas m\u00e1ximas", None))
+        self.target_error.setText(QCoreApplication.translate("MainWindow", u"0.08", None))
+        self.begin_button.setText(QCoreApplication.translate("MainWindow", u"Iniciar", None))
+        self.iteration_label.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"Error objetivo", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"Neuronas capa oculta", None))
+        self.error_label.setText(QCoreApplication.translate("MainWindow", u"-", None))
+        self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Limpiar", None))
+        self.max_iterations.setText(QCoreApplication.translate("MainWindow", u"150", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Raz\u00f3n de aprendizaje", None))
+        ___qtablewidgetitem = self.result_table.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"w1", None));
+        ___qtablewidgetitem1 = self.result_table.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"w2", None));
+        ___qtablewidgetitem2 = self.result_table.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"b", None));
+        ___qtablewidgetitem3 = self.result_table.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"wno", None));
+        ___qtablewidgetitem4 = self.result_table.verticalHeaderItem(0)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"N1", None));
+        ___qtablewidgetitem5 = self.result_table.verticalHeaderItem(1)
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"N2", None));
+        ___qtablewidgetitem6 = self.result_table.verticalHeaderItem(2)
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"N3", None));
+        ___qtablewidgetitem7 = self.result_table.verticalHeaderItem(3)
+        ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"NO", None));
+
+        __sortingEnabled = self.result_table.isSortingEnabled()
+        self.result_table.setSortingEnabled(False)
+        self.result_table.setSortingEnabled(__sortingEnabled)
+
+        self.menuGuardar_dataset.setTitle(QCoreApplication.translate("MainWindow", u"Dataset", None))
+    # retranslateUi
