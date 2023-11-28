@@ -242,7 +242,6 @@ class Ui_MainWindow(object):
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
-    
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.actionGuardar_dataset.setText(QCoreApplication.translate("MainWindow", u"Guardar dataset", None))
