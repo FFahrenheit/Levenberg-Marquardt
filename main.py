@@ -9,7 +9,7 @@ if __name__ == '__main__':
     app = QApplication()
     # Crear ventana
     window = MainWindow()
-    window.setWindowTitle("Proyecto Final - Algoritmo de Levenberg Marquardt")
+    window.setWindowTitle("Proyecto Final: Algoritmo de Levenberg Marquardt")
     # Se hace visible
     window.show()
     # Qt loop
