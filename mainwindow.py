@@ -167,7 +167,7 @@ class MainWindow(QMainWindow):
             hidden_layer_input = np.dot(X, w_input_hidden) + b_hidden
             hidden_layer_output = self.activation_function(hidden_layer_input)
             output_layer_input = np.dot(hidden_layer_output, w_hidden_output) + b_output
-            output_layer_output = self.activation_function(output_layer_input)
+            output_layer_output = self.activation_function_output(output_layer_input)
 
             # Cálculo del error cuadrático medio de la neurona de salida
             error = np.mean((Y - output_layer_output)**2)
@@ -202,12 +202,12 @@ class MainWindow(QMainWindow):
                 # n entradas (salida capa oculta) * i de capa de salida (1) 
                 for i in range(self.n):
                     for j in range(output_size):
-                        Jacobian[sample, start_idx] = h[i] * self.activation_function_derivative(z_o[j])
+                        Jacobian[sample, start_idx] = h[i] * self.activation_function_derivative_output(z_o[j])
                         start_idx += 1
 
                 # 1 bias por neurona de salida
                 for i in range(output_size):
-                    Jacobian[sample, start_idx] = self.activation_function_derivative(z_o[i])
+                    Jacobian[sample, start_idx] = self.activation_function_derivative_output(z_o[i])
                     start_idx += 1
 
             """ Calculo de Hessiana """
@@ -265,6 +265,12 @@ class MainWindow(QMainWindow):
     def activation_function_derivative(self, v):
         # return self.activation_function(v) * (1 - self.activation_function(v))
         return 1 - np.tanh(v)**2
+    
+    def activation_function_output(self, v):
+        return np.tanh(v)
+    
+    def activation_function_derivative_output(self, v):
+        return (1 - self.activation_function(v))*(1 + self.activation_function(v))
     
     def classificate(self, solution, X, Y):
         hidden_layer_weights = solution["wh"]
